@@ -1,0 +1,48 @@
+main: de.battlesucht.cbsystem.BattleCitybuild
+authors:
+  - BattleSucht Development
+  - plocki
+version: 1.0
+prefix: CBSystem
+load: STARTUP
+name: CBSystem
+api-version: 1.16
+website: https://battlesucht.de
+commands:
+  job:
+  jobs:
+  god:
+  vanish:
+  v:
+  tp:
+  tphere:
+  tpa:
+  tpahere:
+  craft:
+  enderchest:
+  ec:
+  invsee:
+  gamemode:
+  gm:
+  reply:
+  r:
+  warp:
+  setwarp:
+  spawn:
+  setspawn:
+  ptime:
+  day:
+  night:
+  head:
+  skull:
+  kopf:
+  home:
+  heal:
+  tpaccept:
+  tpdeny:
+  sign:
+  rename:
+  msg:
+  speed:
+  clearlag:
+  viewarmor:
