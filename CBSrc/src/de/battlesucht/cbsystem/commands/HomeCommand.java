@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class HomeCommand extends Language implements CommandExecutor {
+  @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
     if(sender instanceof Player) {
       Player p = (Player) sender;

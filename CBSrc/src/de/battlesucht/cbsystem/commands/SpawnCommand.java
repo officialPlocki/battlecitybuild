@@ -15,6 +15,7 @@ public class SpawnCommand extends Language implements CommandExecutor {
   private FileBuilder fb = new FileBuilder("locations.data");
   private YamlConfiguration yml = fb.getYaml();
 
+  @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
     if (!(sender instanceof Player))
       return false; 

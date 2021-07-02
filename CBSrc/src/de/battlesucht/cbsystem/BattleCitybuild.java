@@ -1,16 +1,20 @@
 package de.battlesucht.cbsystem;
 
 import de.battlesucht.api.utils.server.plugin.PermissionManager;
+import de.battlesucht.cbsystem.commands.*;
 import de.battlesucht.cbsystem.listener.Join;
 import de.battlesucht.cbsystem.utils.ScoreboardManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import de.battlesucht.cbsystem.commands.*;
 
 public class BattleCitybuild extends JavaPlugin {
 
     private static Plugin instance;
+
+    public static Plugin getInstance() {
+        return instance;
+    }
 
     @Override
     public void onEnable() {
@@ -18,45 +22,6 @@ public class BattleCitybuild extends JavaPlugin {
         ScoreboardManager.update();
         Bukkit.getPluginManager().registerEvents(new JobCommand(), this);
         Bukkit.getPluginManager().registerEvents(new Join(), this);
-        getCommand("job").setExecutor(new JobCommand());
-        getCommand("jobs").setExecutor(new JobCommand());
-        getCommand("fly").setExecutor(new FlyCommand());
-        getCommand("god").setExecutor(new GodCommand());
-        getCommand("vanish").setExecutor(new VanishCommand());
-        getCommand("v").setExecutor(new VanishCommand());
-        getCommand("tp").setExecutor(new TpCommand());
-        getCommand("tphere").setExecutor(new TphereCommand());
-        getCommand("tpa").setExecutor(new TpaCommand());
-        getCommand("tpahere").setExecutor(new TpahereCommand());
-        getCommand("craft").setExecutor(new CraftCommand());
-        getCommand("enderchest").setExecutor(new EnderchestCommand());
-        getCommand("ec").setExecutor(new EnderchestCommand());
-        getCommand("invsee").setExecutor(new InvseeCommand());
-        getCommand("gamemode").setExecutor(new GamemodeCommand());
-        getCommand("gm").setExecutor(new GamemodeCommand());
-        getCommand("reply").setExecutor(new ReplyCommand());
-        getCommand("r").setExecutor(new ReplyCommand());
-        getCommand("warp").setExecutor(new WarpCommand());
-        getCommand("setwarp").setExecutor(new SetwarpCommand());
-        getCommand("spawn").setExecutor(new SpawnCommand());
-        getCommand("setspawn").setExecutor(new SetspawnCommand());
-        getCommand("ptime").setExecutor(new PtimeCommand());
-        getCommand("day").setExecutor(new DayCommand());
-        getCommand("night").setExecutor(new NightCommand());
-        getCommand("head").setExecutor(new HeadCommand());
-        getCommand("skull").setExecutor(new SkullCommand());
-        getCommand("kopf").setExecutor(new SkullCommand());
-        getCommand("home").setExecutor(new HomeCommand());
-        getCommand("heal").setExecutor(new HealCommand());
-        getCommand("tpaccept").setExecutor(new TpacceptCommand());
-        getCommand("tpdeny").setExecutor(new TpdenyCommand());
-        getCommand("sign").setExecutor(new SignCommand());
-        getCommand("rename").setExecutor(new RenameCommand());
-        getCommand("msg").setExecutor(new MsgCommand());
-        getCommand("speed").setExecutor(new SpeedCommand());
-        getCommand("clearlag").setExecutor(new ClearlagCommand());
-        getCommand("viewarmor").setExecutor(new ViewarmorCommand());
-
         PermissionManager pm = new PermissionManager("BattleCitybuild");
         pm.addPermission("system.chat.clear");
         pm.addPermission("system.chat.clear.bypass");
@@ -86,16 +51,49 @@ public class BattleCitybuild extends JavaPlugin {
         pm.addPermission("system.tp");
         pm.addPermission("system.vanish.other");
         pm.build();
-
+        this.getCommand("job").setExecutor(new JobCommand());
+        this.getCommand("jobs").setExecutor(new JobCommand());
+        this.getCommand("fly").setExecutor(new FlyCommand());
+        this.getCommand("god").setExecutor(new GodCommand());
+        this.getCommand("vanish").setExecutor(new VanishCommand());
+        this.getCommand("v").setExecutor(new VanishCommand());
+        this.getCommand("tp").setExecutor(new TpCommand());
+        this.getCommand("tphere").setExecutor(new TphereCommand());
+        this.getCommand("tpa").setExecutor(new TpaCommand());
+        this.getCommand("tpahere").setExecutor(new TpahereCommand());
+        this.getCommand("craft").setExecutor(new CraftCommand());
+        this.getCommand("enderchest").setExecutor(new EnderchestCommand());
+        this.getCommand("ec").setExecutor(new EnderchestCommand());
+        this.getCommand("invsee").setExecutor(new InvseeCommand());
+        this.getCommand("gamemode").setExecutor(new GamemodeCommand());
+        this.getCommand("gm").setExecutor(new GamemodeCommand());
+        this.getCommand("reply").setExecutor(new ReplyCommand());
+        this.getCommand("r").setExecutor(new ReplyCommand());
+        this.getCommand("warp").setExecutor(new WarpCommand());
+        this.getCommand("setwarp").setExecutor(new SetwarpCommand());
+        this.getCommand("spawn").setExecutor(new SpawnCommand());
+        this.getCommand("setspawn").setExecutor(new SetspawnCommand());
+        this.getCommand("ptime").setExecutor(new PtimeCommand());
+        this.getCommand("day").setExecutor(new DayCommand());
+        this.getCommand("night").setExecutor(new NightCommand());
+        this.getCommand("head").setExecutor(new HeadCommand());
+        this.getCommand("skull").setExecutor(new SkullCommand());
+        this.getCommand("kopf").setExecutor(new SkullCommand());
+        this.getCommand("home").setExecutor(new HomeCommand());
+        this.getCommand("heal").setExecutor(new HealCommand());
+        this.getCommand("tpaccept").setExecutor(new TpacceptCommand());
+        this.getCommand("tpdeny").setExecutor(new TpdenyCommand());
+        this.getCommand("sign").setExecutor(new SignCommand());
+        this.getCommand("rename").setExecutor(new RenameCommand());
+        this.getCommand("msg").setExecutor(new MsgCommand());
+        this.getCommand("speed").setExecutor(new SpeedCommand());
+        this.getCommand("clearlag").setExecutor(new ClearlagCommand());
+        this.getCommand("viewarmor").setExecutor(new ViewarmorCommand());
     }
 
     @Override
     public void onDisable() {
 
-    }
-
-    public static Plugin getInstance() {
-        return instance;
     }
 
 }
