@@ -44,7 +44,7 @@ public static void update() {
     obj.getScore( "§5Coins").setScore(6);
     obj.getScore( "§c").setScore(4);
     obj.getScore( "§5Bits").setScore(3);
-    obj.getScore( "§e").setScore(1);
+    obj.getScore( "§d").setScore(1);
 
     Team coins = board.registerNewTeam("coins");
     coins.setPrefix("§8● §7");

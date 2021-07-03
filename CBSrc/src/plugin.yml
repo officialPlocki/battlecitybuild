@@ -1,4 +1,4 @@
-main: de.battlesucht.cbsystem.BattleCitybuild
+main: de.battlesucht.cbsystem.Citybuild
 authors:
   - BattleSucht Development
   - plocki
@@ -31,6 +31,8 @@ commands:
   r:
   warp:
   setwarp:
+  spawn:
+  setspawn:
   ptime:
   day:
   night:
